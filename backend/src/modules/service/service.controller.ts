@@ -9,7 +9,10 @@ export const getServices = catchAsync(async (req: Request, res: Response, next: 
   const where: any = {};
 
   if (categoryId) {
-    where.categoryId = String(categoryId);
+    const parsedId = parseInt(String(categoryId), 10);
+    if (!isNaN(parsedId)) {
+      where.categoryId = parsedId;
+    }
   }
 
   if (search) {

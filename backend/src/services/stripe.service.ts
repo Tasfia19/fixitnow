@@ -23,9 +23,8 @@ export const createCheckoutSession = async (bookingId: string, amount: number, s
       },
     ],
     mode: 'payment',
-    // We point to general placeholders since this is a backend-only REST API
-    success_url: `https://example.com/payment-success?session_id={CHECKOUT_SESSION_ID}&booking_id=${bookingId}`,
-    cancel_url: `https://example.com/payment-cancel?booking_id=${bookingId}`,
+    success_url: `http://localhost:3000/payment/success?session_id={CHECKOUT_SESSION_ID}&booking_id=${bookingId}`,
+    cancel_url: `http://localhost:3000/payment/cancel?booking_id=${bookingId}`,
     client_reference_id: bookingId,
     metadata: {
       bookingId,
