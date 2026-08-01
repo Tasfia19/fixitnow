@@ -734,3 +734,56 @@ body {
   color: var(--text-secondary);
   cursor: pointer;
 }
+
+/* ==========================================
+   Responsive Screen Media Queries
+   ========================================== */
+
+@media (max-width: 768px) {
+  .header {
+    height: auto !important;
+    padding: 12px 0;
+  }
+  .header-container {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+  .hero {
+    padding: 48px 0;
+  }
+  .hero h1 {
+    font-size: 32px !important;
+  }
+  .hero p {
+    font-size: 16px !important;
+  }
+  .grid-3 {
+    grid-template-columns: 1fr !important;
+  }
+  .grid-2 {
+    grid-template-columns: 1fr !important;
+  }
+  .stat-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-card {
+    padding: 20px !important;
+    box-shadow: none !important;
+  }
+  .modal-content {
+    padding: 20px !important;
+    margin: 12px;
+  }
+  .container {
+    padding: 0 16px !important;
+  }
+}
